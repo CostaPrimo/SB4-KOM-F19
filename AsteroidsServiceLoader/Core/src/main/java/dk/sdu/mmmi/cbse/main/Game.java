@@ -10,6 +10,7 @@ import dk.sdu.mmmi.cbse.common.data.GameData;
 import dk.sdu.mmmi.cbse.common.data.World;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 import dk.sdu.mmmi.cbse.common.services.IGamePluginService;
+import dk.sdu.mmmi.cbse.common.services.IPostEntityProcessingService;
 import dk.sdu.mmmi.cbse.common.util.SPILocator;
 import dk.sdu.mmmi.cbse.managers.GameInputProcessor;
 import java.util.ArrayList;
@@ -24,6 +25,7 @@ public class Game
 
     private final GameData gameData = new GameData();
     private List<IEntityProcessingService> entityProcessors = new ArrayList<>();
+    private List<IPostEntityProcessingService> postEntityProcessors = new ArrayList<>();
     private World world = new World();
 
     @Override
@@ -68,6 +70,9 @@ public class Game
         // Update
         for (IEntityProcessingService entityProcessorService : getEntityProcessingServices()) {
             entityProcessorService.process(gameData, world);
+        }
+         for (IPostEntityProcessingService postEntityProcessorService : getPostEntityProcessingServices()) {
+            postEntityProcessorService.process(gameData, world);
         }
     }
 
@@ -114,5 +119,9 @@ public class Game
 
     private Collection<? extends IEntityProcessingService> getEntityProcessingServices() {
         return SPILocator.locateAll(IEntityProcessingService.class);
+    }
+    
+       private Collection<? extends IPostEntityProcessingService> getPostEntityProcessingServices() {
+        return SPILocator.locateAll(IPostEntityProcessingService.class);
     }
 }
