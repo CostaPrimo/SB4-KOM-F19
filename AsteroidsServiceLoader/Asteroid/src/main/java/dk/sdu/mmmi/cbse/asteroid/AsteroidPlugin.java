@@ -25,7 +25,6 @@ public class AsteroidPlugin
     public void start(GameData gameData, World world) {
        asteroid = createLargeAsteroid(gameData);
        world.addEntity(asteroid);
-        System.out.println("added " + asteroid + " to the world");
     }
 
     @Override
