@@ -10,7 +10,6 @@ import dk.sdu.mmmi.cbse.common.data.GameData;
 import dk.sdu.mmmi.cbse.common.data.World;
 import dk.sdu.mmmi.cbse.common.data.entityparts.PositionPart;
 import dk.sdu.mmmi.cbse.common.data.entityparts.LifePart;
-import dk.sdu.mmmi.cbse.common.data.entityparts.SplitterPart;
 import dk.sdu.mmmi.cbse.common.services.IPostEntityProcessingService;
 //import org.openide.util.lookup.ServiceProvider;
 
@@ -53,25 +52,6 @@ public class Collider implements IPostEntityProcessingService {
                         if (entityLife.getLife() <= 0) {
                             world.removeEntity(entity);
                         }
-
-                        // if collisioner is not a bullet - it has been hit, and should have its life reduced
-                    }
-                    if (collisionLife.getLife() > 0) {
-                        collisionLife.setLife(collisionLife.getLife() - 1);
-                        // if collisioner is out of life - remove
-                        if (collisionLife.getLife() <= 0) {
-                            world.removeEntity(collisionDetection);
-                        }
-                    }
-
-                    // if entity is an asteroid
-                    if (entity.getPart(SplitterPart.class) != null) {
-                        SplitterPart splitter = entity.getPart(SplitterPart.class);
-                        splitter.setShouldSplit(true);
-                    }
-                    if (collisionDetection.getPart(SplitterPart.class) != null) {
-                        SplitterPart splitter = collisionDetection.getPart(SplitterPart.class);
-                        splitter.setShouldSplit(true);
                     }
                 }
             }
