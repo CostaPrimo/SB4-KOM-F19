@@ -11,6 +11,7 @@ import java.net.MalformedURLException;
 import static junit.framework.TestCase.assertNotNull;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
 
@@ -38,6 +39,7 @@ public class AssetsJarFileResolverTest {
      * Test of resolve method, of class AssetsJarFileResolver.
      * @throws java.net.MalformedURLException
      */
+    @Ignore
     @Test
     public void testJarAssetManager() throws MalformedURLException {
 
