@@ -71,6 +71,10 @@
         <module>Common</module>
         <module>CommonAsteroids</module>
         <module>CommonEnemy</module>
+        <module>Player</module>
+        <module>Bullet</module>
+        <module>Enemy</module>
+        <module>Collision</module>
     </modules>
 
     <properties>
