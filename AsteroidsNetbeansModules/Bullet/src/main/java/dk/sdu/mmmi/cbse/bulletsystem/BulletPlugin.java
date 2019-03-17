@@ -8,15 +8,14 @@ import org.openide.util.lookup.ServiceProvider;
 import org.openide.util.lookup.ServiceProviders;
 
 @ServiceProviders(value = {
- @ServiceProvider(service = IGamePluginService.class),
-})
+    @ServiceProvider(service = IGamePluginService.class),})
 public class BulletPlugin implements IGamePluginService {
-    
+
     private Entity bullet;
 
     @Override
     public void start(GameData gameData, World world) {
-        
+
     }
 
     @Override
@@ -27,5 +26,5 @@ public class BulletPlugin implements IGamePluginService {
             }
         }
     }
-    
+
 }
