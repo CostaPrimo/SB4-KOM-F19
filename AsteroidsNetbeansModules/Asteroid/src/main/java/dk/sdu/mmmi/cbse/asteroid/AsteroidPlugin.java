@@ -5,7 +5,8 @@
  */
 package dk.sdu.mmmi.cbse.asteroid;
 
-import static dk.sdu.mmmi.cbse.asteroid.AsteroidType.LARGE;
+import dk.sdu.mmmi.cbse.common.asteroids.Asteroid;
+import static dk.sdu.mmmi.cbse.common.asteroids.AsteroidType.LARGE;
 import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.GameData;
 import dk.sdu.mmmi.cbse.common.data.World;

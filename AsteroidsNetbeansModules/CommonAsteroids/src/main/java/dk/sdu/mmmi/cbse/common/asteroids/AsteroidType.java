@@ -3,23 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dk.sdu.mmmi.cbse.asteroid;
-
-import dk.sdu.mmmi.cbse.common.data.Entity;
+package dk.sdu.mmmi.cbse.common.asteroids;
 
 /**
  *
  * @author Phillip Olsen
  */
-public class Asteroid extends Entity {
+public enum AsteroidType {
 
-    private AsteroidType type;
+    LARGE("LARGE"),
+    MEDIUM("MEDIUM"),
+    SMALL("SMALL");
 
-    public Asteroid(AsteroidType type) {
-        this.type = type;
+    private String size;
+
+    private AsteroidType(String size) {
+        this.size = size;
     }
 
     public String getSize() {
-        return type.getSize();
+        return size;
     }
 }
