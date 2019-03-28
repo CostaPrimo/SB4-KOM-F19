@@ -1,2 +1,5 @@
 **/target/**
-/AsteroidsNetbeansModules/branding/target/
+**/.idea
+*.iml
+rebel.xml
+*.jar
