@@ -7,5 +7,8 @@
                 <goal>install</goal>
                 <goal>pax:provision</goal>
             </goals>
+            <properties>
+                <jpda.listen>maven</jpda.listen>
+            </properties>
         </action>
     </actions>

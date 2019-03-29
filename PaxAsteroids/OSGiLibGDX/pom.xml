@@ -14,7 +14,6 @@
     </properties>
   
     <modelVersion>4.0.0</modelVersion>
-    <groupId>dk.sdu.mmmi.cbse</groupId>
     <artifactId>OSGiLibGDX</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>bundle</packaging>

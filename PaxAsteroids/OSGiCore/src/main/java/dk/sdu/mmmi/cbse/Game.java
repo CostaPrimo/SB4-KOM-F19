@@ -32,7 +32,6 @@ public class Game implements ApplicationListener {
     }
 
     public void init() {
-        System.out.println("TEST");
         LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
         cfg.title = "Asteroids";
         cfg.width = 800;
