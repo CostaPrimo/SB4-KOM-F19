@@ -18,8 +18,7 @@ Bundle-NativeCode: libgdx-box2d.dylib;
  lwjgl.dll;
  lwjgl64.dll;
  osname=Windows 10;
- processor=x86;
- processor=x86-64;
+ processor=x86-64,
  libgdx-box2d.so;
  libgdx-box2d64.so;
  libgdx-freetype.so;
